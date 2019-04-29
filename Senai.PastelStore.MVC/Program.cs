@@ -1,37 +1,62 @@
 ﻿using System;
+using Senai.PastelStore.MVC.Repositorio;
 using Senai.PastelStore.MVC.Utils;
+using Senai.PastelStore.MVC.ViewController;
 using Senai.PastelStore.MVC.ViewModel;
 
-namespace Senai.PastelStore.MVC {
-        class Program {
-            static void Main (string[] args) {
+namespace Senai.PastelStore.MVC
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
 
-                int opcaoDeslogado = 0;
-                do {
-                    MenuUtil.MenuDeslogado ();
-                    opcaoDeslogado = int.Parse (Console.ReadLine ());
-                    switch (opcaoDeslogado) {
-                        case 1:
-                            //CADASTRAR
-                            break;
+            int opcaoDeslogado = 0;
+            do
+            {
+                MenuUtil.MenuDeslogado();
+                opcaoDeslogado = int.Parse(Console.ReadLine());
+                Console.Clear();
 
-                        case 2:
-                            //FAZERLOGIN
-                            break;
+                switch (opcaoDeslogado)
+                {
+                    case 1:
+                        //CADASTRAR
+                        UsuarioViewController.CadastrarUsuario();
+                        System.Console.WriteLine(" \n Press ENTER para voltar ao menu");
+                        Console.ReadLine();
+                        Console.Clear();
+                        break;
 
-                        case 3:
-                            //LISTR CADASTRADOS
-                            break;
+                    case 2:
+                        //FAZERLOGIN
+                        UsuarioViewModel usuarioRetornado = UsuarioViewController.EfetuarLogin();
+                        if (usuarioRetornado != null)
+                        {
+                            System.Console.WriteLine($"Bem Vindo {usuarioRetornado.Nome}");
+                            //colar menu logado
+                            
+                        }
+                        break;
 
-                        case 0:
-                            //SAIR
-                            break;
+                    case 3:
+                        //LISTAR CADASTRADOS
+                        UsuarioViewController.ListarUsuario();
+                        System.Console.WriteLine(" \n Press ENTER para voltar ao menu");
+                        Console.ReadLine();
+                        Console.Clear();
+                        break;
 
-                        default:
-                            System.Console.WriteLine("Opção Inválida");
-                            break;
-                    }
+                    case 0:
+                        //SAIR
+                        break;
 
-                } while (opcaoDeslogado != 0);                }
-            }
+                    default:
+                        System.Console.WriteLine("Opção Inválida");
+                        break;
+                }
+
+            } while (opcaoDeslogado != 0);
         }
+    }
+}

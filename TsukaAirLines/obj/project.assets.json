@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\44680781890\\Documents\\Gabriel Rodrigues Amador - Tarde -Dev. Sist\\Sprint 4\\Orienta-o-Prgramada-a-Objeto\\TsukaAirLines\\TsukaAirLines.csproj",
+      "projectUniqueName": "C:\\Users\\44680781890\\Documents\\Gabriel Rodrigues Amador - Tarde -Dev. Sist\\Sprint 4\\Programacao-Orientada-a-Objeto\\TsukaAirLines\\TsukaAirLines.csproj",
       "projectName": "TsukaAirLines",
-      "projectPath": "C:\\Users\\44680781890\\Documents\\Gabriel Rodrigues Amador - Tarde -Dev. Sist\\Sprint 4\\Orienta-o-Prgramada-a-Objeto\\TsukaAirLines\\TsukaAirLines.csproj",
+      "projectPath": "C:\\Users\\44680781890\\Documents\\Gabriel Rodrigues Amador - Tarde -Dev. Sist\\Sprint 4\\Programacao-Orientada-a-Objeto\\TsukaAirLines\\TsukaAirLines.csproj",
       "packagesPath": "C:\\Users\\44680781890\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\44680781890\\Documents\\Gabriel Rodrigues Amador - Tarde -Dev. Sist\\Sprint 4\\Orienta-o-Prgramada-a-Objeto\\TsukaAirLines\\obj\\",
+      "outputPath": "C:\\Users\\44680781890\\Documents\\Gabriel Rodrigues Amador - Tarde -Dev. Sist\\Sprint 4\\Programacao-Orientada-a-Objeto\\TsukaAirLines\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

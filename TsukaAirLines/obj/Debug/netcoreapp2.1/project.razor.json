@@ -2,5 +2,13 @@
   "ProjectFilePath": "c:\\Users\\44680781890\\Documents\\Gabriel Rodrigues Amador - Tarde -Dev. Sist\\Sprint 4\\Programacao-Orientada-a-Objeto\\TsukaAirLines\\TsukaAirLines.csproj",
   "TargetFramework": "netcoreapp2.1",
   "TagHelpers": [],
-  "Configuration": null
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
 }

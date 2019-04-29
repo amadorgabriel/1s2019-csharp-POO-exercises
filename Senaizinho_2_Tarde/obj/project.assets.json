@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\44680781890\\Documents\\Gabriel Rodrigues Amador - Tarde -Dev. Sist\\Sprint 4\\Orienta-o-Prgramada-a-Objeto\\Senaizinho_2_Tarde\\Senaizinho_2_Tarde.csproj",
+      "projectUniqueName": "C:\\Users\\44680781890\\Documents\\Gabriel Rodrigues Amador - Tarde -Dev. Sist\\Sprint 4\\Programacao-Orientada-a-Objeto\\Senaizinho_2_Tarde\\Senaizinho_2_Tarde.csproj",
       "projectName": "Senaizinho_2_Tarde",
-      "projectPath": "C:\\Users\\44680781890\\Documents\\Gabriel Rodrigues Amador - Tarde -Dev. Sist\\Sprint 4\\Orienta-o-Prgramada-a-Objeto\\Senaizinho_2_Tarde\\Senaizinho_2_Tarde.csproj",
+      "projectPath": "C:\\Users\\44680781890\\Documents\\Gabriel Rodrigues Amador - Tarde -Dev. Sist\\Sprint 4\\Programacao-Orientada-a-Objeto\\Senaizinho_2_Tarde\\Senaizinho_2_Tarde.csproj",
       "packagesPath": "C:\\Users\\44680781890\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\44680781890\\Documents\\Gabriel Rodrigues Amador - Tarde -Dev. Sist\\Sprint 4\\Orienta-o-Prgramada-a-Objeto\\Senaizinho_2_Tarde\\obj\\",
+      "outputPath": "C:\\Users\\44680781890\\Documents\\Gabriel Rodrigues Amador - Tarde -Dev. Sist\\Sprint 4\\Programacao-Orientada-a-Objeto\\Senaizinho_2_Tarde\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
