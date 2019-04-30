@@ -1,16 +1,17 @@
 using System;
+
 namespace Senai.PastelStore.MVC.Utils
 {
     public class MenuUtil
     {
+        /// <summary>
+        /// Mostra as opções do usuário deslogado
+        /// </summary>
         public static void MenuDeslogado()
         {
-            /// <summary>
-            /// Mostra as opções do usuário deslogado
-            /// </summary>
 
             Console.WriteLine("--------------------------------------------");
-            Console.WriteLine("-------------Pizzaria C.A ------------------");
+            Console.WriteLine("----------Restaurante PastelStore---- -------");
             Console.WriteLine("-------------      Conta      --------------");
             Console.WriteLine("--------------------------------------------");
             Console.WriteLine("           (1) Cadastrar Usuário            ");
@@ -20,7 +21,6 @@ namespace Senai.PastelStore.MVC.Utils
             Console.WriteLine("           (0) Sair                         ");
             Console.WriteLine("--------------------------------------------");
             Console.WriteLine("           Escolha uma opção                ");
-
         }
 
         /// <summary>
@@ -29,14 +29,15 @@ namespace Senai.PastelStore.MVC.Utils
         public static void MenuLogado()
         {
             Console.WriteLine("--------------------------------------------");
-            Console.WriteLine("-----------Pastelaria PastelStore-----------");
+            Console.WriteLine("-----------Pastelaria PastelStore------------");
             Console.WriteLine("-----------      Cardápio      -------------");
             Console.WriteLine("--------------------------------------------");
             Console.WriteLine("           (1) Cadastrar Produto            ");
             Console.WriteLine("           (2) Listar todos os Produtos     ");
-            Console.WriteLine("           (3) Valor Total                  ");
-            Console.WriteLine("           (4) Alterar                      ");
-            Console.WriteLine("           (4) Remover                      ");
+            Console.WriteLine("           (3) Buscar produto por ID        ");
+            Console.WriteLine("           (4) Valor Total                  ");
+            Console.WriteLine("           (5) Alterar                      "); //VERIFICAR!!
+            Console.WriteLine("           (6) Remover                      ");
             Console.WriteLine("--------------------------------------------");
             Console.WriteLine("           (0) Sair                         ");
             Console.WriteLine("--------------------------------------------");

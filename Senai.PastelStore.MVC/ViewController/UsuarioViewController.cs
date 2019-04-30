@@ -1,5 +1,4 @@
 using System;
-using System.Threading;
 using System.Collections.Generic;
 using Senai.PastelStore.MVC.Repositorio;
 using Senai.PastelStore.MVC.Utils;
@@ -9,50 +8,43 @@ namespace Senai.PastelStore.MVC.ViewController
 {
     public class UsuarioViewController
     {
-        //Instanciar o repositório
-        static UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio();
-
-        public static void CadastrarUsuario()
-        {
-
+        //Instanciar o repositorio
+        static UsuarioRepositorio  usuarioRepositorio = new UsuarioRepositorio();
+        public static void CadastrarUsuario(){
             string nome, email, senha, confirmaSenha;
 
             do
-            { //DIGITAR NOME
-            Console.Clear();
-            
-                System.Console.Write("Digite seu nome: ");
+            {
+                Console.WriteLine("Digite o nome do usuário");
                 nome = Console.ReadLine();
 
-                if (string.IsNullOrEmpty(nome)) // MÉTODO PRÓPRIO PARA ANALIDAR STRINGS
+                if (string.IsNullOrEmpty(nome))
                 {
-                    System.Console.WriteLine("Nome Inválido!");
+                    Console.WriteLine("Nome inválido");
                 }
             } while (string.IsNullOrEmpty(nome));
 
             do
-            { //DIGITAR EMAIL
-            
-                System.Console.Write("Digite seu email: ");
+            {
+                Console.WriteLine("Digite o seu E-Mail");
                 email = Console.ReadLine();
-                if (!ValidacoesUtil.ValidadorDeEmail(email))
-                {
-                    System.Console.WriteLine("Email inválido");
+
+                if(!ValidacoesUtil.ValidadorDeEmail(email)){
+                    Console.WriteLine("Email inválido");
                 }
+
             } while (!ValidacoesUtil.ValidadorDeEmail(email));
 
             do
-            { //DIGITAR SENHA 2 VEZES
-            
-                System.Console.Write("Digite sua senha: ");
+            {
+                Console.WriteLine("Digite a senha");
                 senha = Console.ReadLine();
 
-                System.Console.Write("Confirme a senha: ");
+                Console.WriteLine("Confirme a senha");
                 confirmaSenha = Console.ReadLine();
 
-                if (!ValidacoesUtil.ValidadorDeSenha(senha, confirmaSenha))
-                {
-                    System.Console.WriteLine("Senha Inválida");
+                if(!ValidacoesUtil.ValidadorDeSenha(senha, confirmaSenha)){
+                    Console.WriteLine("Senha inválida");
                 }
 
             } while (!ValidacoesUtil.ValidadorDeSenha(senha, confirmaSenha));
@@ -62,51 +54,46 @@ namespace Senai.PastelStore.MVC.ViewController
             usuarioViewModel.Email = email;
             usuarioViewModel.Senha = senha;
 
-
-
             usuarioRepositorio.Inserir(usuarioViewModel);
-            System.Console.WriteLine("Usuário Cadastrado com sucesso!");
 
-        }//FIM CADASTRO
-    
+            Console.WriteLine("Usuário Cadastrado com sucesso");
+        }//fim cadastro de usuário
+
         public static void ListarUsuario(){
-            
-            List<UsuarioViewModel> listaDeUsuarios = usuarioRepositorio.Listar();
+         List<UsuarioViewModel> listaDeUsuarios =  usuarioRepositorio.Listar();
 
-            foreach (var item in listaDeUsuarios)
+         foreach (var item in listaDeUsuarios)
             {
-                System.Console.WriteLine($"Id: {item.Id} \nNome: {item.Nome}\nEmail: {item.Email}\nSenha: {item.Senha}\nData Criação: {item.DataCriacao} ");
-                System.Console.WriteLine(" ");
-            }   
-        }//FIM LISTAR USUARIO
+                Console.WriteLine($"Id: {item.Id} - Nome: {item.Nome} - E-mail: {item.Email} - Senha: {item.Senha}  - Data de Criação {item.DataCriacao}");
+            }
+
+        }//Fim Listar Usuario
 
         public static UsuarioViewModel EfetuarLogin(){
-            string email, senha;
-
+            string email,  senha;
             do
             {
-                System.Console.Write("Digite o email: ");
+                Console.WriteLine("Digite o email");
                 email = Console.ReadLine();
-                
-                if (!ValidacoesUtil.ValidadorDeEmail(email)){
-                    System.Console.WriteLine("Email Inválido");   
-                }
 
+                if(!ValidacoesUtil.ValidadorDeEmail(email)){
+                    Console.WriteLine("Email Inválido");
+                }
             } while (!ValidacoesUtil.ValidadorDeEmail(email));
 
-            System.Console.Write("Digite sua Senha: ");
+            Console.WriteLine("Digite sua Senha:");
             senha = Console.ReadLine();
 
-            UsuarioViewModel usuarioRetornado = usuarioRepositorio.BuscarUsuario(email, senha);
+            UsuarioViewModel usuarioRetornado = usuarioRepositorio.BuscarUsuario(email,senha);
+
             if (usuarioRetornado != null)
             {
                 return usuarioRetornado;
             }else{
-                System.Console.WriteLine($"Usuário ou senha inválida");
-                return usuarioRetornado;
+                Console.WriteLine($"Usuário ou Senha inválida");
+                return null;
             }
 
-        }//FIM EFETUAR LOGIN
-
+        }//fim efetuar login
     }
 }
