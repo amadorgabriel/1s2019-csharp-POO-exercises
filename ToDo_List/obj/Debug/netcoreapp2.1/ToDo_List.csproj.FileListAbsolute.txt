@@ -1,0 +1,11 @@
+C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\ToDo_List\obj\Debug\netcoreapp2.1\ToDo_List.csprojAssemblyReference.cache
+C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\ToDo_List\obj\Debug\netcoreapp2.1\ToDo_List.csproj.CoreCompileInputs.cache
+C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\ToDo_List\obj\Debug\netcoreapp2.1\ToDo_List.AssemblyInfoInputs.cache
+C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\ToDo_List\obj\Debug\netcoreapp2.1\ToDo_List.AssemblyInfo.cs
+C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\ToDo_List\bin\Debug\netcoreapp2.1\ToDo_List.deps.json
+C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\ToDo_List\bin\Debug\netcoreapp2.1\ToDo_List.runtimeconfig.json
+C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\ToDo_List\bin\Debug\netcoreapp2.1\ToDo_List.runtimeconfig.dev.json
+C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\ToDo_List\bin\Debug\netcoreapp2.1\ToDo_List.dll
+C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\ToDo_List\bin\Debug\netcoreapp2.1\ToDo_List.pdb
+C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\ToDo_List\obj\Debug\netcoreapp2.1\ToDo_List.dll
+C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\ToDo_List\obj\Debug\netcoreapp2.1\ToDo_List.pdb

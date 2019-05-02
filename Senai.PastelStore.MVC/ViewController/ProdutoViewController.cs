@@ -99,21 +99,26 @@ namespace Senai.PastelStore.MVC.ViewController
 
         }//Fim Listar Usuario
 
-        public static void ValorTotal()
-        {
-            int i = 0;
-            int contador = 0;
-            float[] precosProdutos = new float[1000];
+        // public static void ValorTotal()
+        // {
+        //     int i = 0;
+        //     float[] precosProdutos = new float[1000];
 
-            foreach (var item in ProdutoRepositorio.listaDeProdutos)
-            {
-                item.Preco = precosProdutos[i];
-                i++;
-            }
+        //     foreach (var item in ProdutoRepositorio.listaDeProdutos)
+        //     {
+        //         item.Preco = precosProdutos[i];
+        //         i++;
+        //     }
+        //     // SOMAR O PRECO DE TODOS OS PRODUTOS EXISTENTES
+        //     // Pegar preco 1
+        //     // somar com preco posterior
+        //     for (int i = 0; i < precosProdutos.Length; i++)
+        //     {
+        //         float valorTotal = precosProdutos[i] + precosProdutos[i + 1];
+        //         float todosValores = valorTotal + precosProdutos[i + 2];
 
-            float valorTotal = produto + precosProdutos[contador++];
-
-            System.Console.WriteLine($"O valor total da soma de todos os produtos equivale a: {ProdutoRepo}");
-        }
+        //     }
+        //     System.Console.WriteLine($"O valor total da soma de todos os produtos equivale a: {ProdutoRepo}");
+        // }
     }
 }
