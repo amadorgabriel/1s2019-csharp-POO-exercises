@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Users\\44680781890\\Documents\\Gabriel Rodrigues Amador - Tarde -Dev. Sist\\Sprint 4\\Programacao-Orientada-a-Objeto\\ToDo_List\\ToDo_List.csproj",
+  "TargetFramework": "netcoreapp2.1",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}

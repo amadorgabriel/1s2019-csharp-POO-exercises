@@ -6,12 +6,17 @@ namespace ToDo_List.Repositorio
 {
     public class UsuarioRepositorio
     {
-        List<UsuarioViewModel> ListaDeUsers = new List<UsuarioViewModel>(); 
-         //----------------------------------------------------------
-        public static UsuarioViewModel Inserir(UsuarioViewModel user){
-            DateTime Datacriacao = DateTime.Now;
-            IDictionary = 
-            
+        static List<UsuarioViewModel> ListaDeUsers = new List<UsuarioViewModel>();
+        //----------------------------------------------------------
+        public static UsuarioViewModel Inserir(UsuarioViewModel user)
+        {
+            ListaDeUsers.Add(user);
+            return user;
+        }
+
+        public static List<UsuarioViewModel> Listar()
+        {
+            return ListaDeUsers;
         }
     }
 }

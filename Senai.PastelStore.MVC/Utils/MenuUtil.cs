@@ -37,7 +37,7 @@ namespace Senai.PastelStore.MVC.Utils
             Console.WriteLine("           (3) Buscar produto por ID        ");
             // Console.WriteLine("           (4) Valor Total                  ");
             // Console.WriteLine("           (5) Alterar                      "); //VERIFICAR!!
-            // Console.WriteLine("           (6) Remover                      ");
+            Console.WriteLine("           (6) Remover                      ");
             Console.WriteLine("--------------------------------------------");
             Console.WriteLine("           (0) Sair                         ");
             Console.WriteLine("--------------------------------------------");

@@ -64,15 +64,15 @@ namespace Senai.PastelStore.MVC
                                         ProdutoRepositorio.BuscarProdutoId(idBusca);
                                         break;
 
-                                    case 4:
-                                        //VALOR TOTAL
+                                    // case 4:
+                                    //     //VALOR TOTAL
                                         
-                                        break;
+                                    //     break;
 
-                                    case 5:
-                                        //ALTERAR
+                                    // case 5:
+                                    //     //ALTERAR
                                         
-                                        break;
+                                    //     break;
 
                                     case 6:
                                         //REMOVER
