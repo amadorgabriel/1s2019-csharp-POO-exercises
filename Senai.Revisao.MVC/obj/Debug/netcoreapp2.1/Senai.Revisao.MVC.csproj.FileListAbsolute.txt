@@ -1,0 +1,11 @@
+C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\Senai.Revisao.MVC\bin\Debug\netcoreapp2.1\Senai.Revisao.MVC.deps.json
+C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\Senai.Revisao.MVC\bin\Debug\netcoreapp2.1\Senai.Revisao.MVC.runtimeconfig.json
+C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\Senai.Revisao.MVC\bin\Debug\netcoreapp2.1\Senai.Revisao.MVC.runtimeconfig.dev.json
+C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\Senai.Revisao.MVC\bin\Debug\netcoreapp2.1\Senai.Revisao.MVC.dll
+C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\Senai.Revisao.MVC\bin\Debug\netcoreapp2.1\Senai.Revisao.MVC.pdb
+C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\Senai.Revisao.MVC\obj\Debug\netcoreapp2.1\Senai.Revisao.MVC.csprojAssemblyReference.cache
+C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\Senai.Revisao.MVC\obj\Debug\netcoreapp2.1\Senai.Revisao.MVC.csproj.CoreCompileInputs.cache
+C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\Senai.Revisao.MVC\obj\Debug\netcoreapp2.1\Senai.Revisao.MVC.AssemblyInfoInputs.cache
+C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\Senai.Revisao.MVC\obj\Debug\netcoreapp2.1\Senai.Revisao.MVC.AssemblyInfo.cs
+C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\Senai.Revisao.MVC\obj\Debug\netcoreapp2.1\Senai.Revisao.MVC.dll
+C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\Senai.Revisao.MVC\obj\Debug\netcoreapp2.1\Senai.Revisao.MVC.pdb
