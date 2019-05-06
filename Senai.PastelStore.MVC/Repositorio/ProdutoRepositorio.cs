@@ -37,7 +37,7 @@ namespace Senai.PastelStore.MVC.Repositorio
 
         public static bool RemoverProduto(int idRem)
         {
-            ProdutoViewModel produto;
+            // ProdutoViewModel produto;
 
             foreach (var item in listaDeProdutos)
             {

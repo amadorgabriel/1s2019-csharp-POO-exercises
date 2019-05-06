@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Senai.Revisao.MVC.Repositorio;
 using Senai.Revisao.MVC.Util;
 using Senai.Revisao.MVC.ViewModel;
@@ -7,7 +8,8 @@ namespace Senai.Revisao.MVC.ViewController
 {
     public class UsuarioViewController
     {
-        
+        public static List<UsuarioViewModel> ListaDeUsuarios = new List<UsuarioViewModel>();
+
         public static int contador = 0;
         public static void CadastrarUsuario()
         {
@@ -69,20 +71,38 @@ namespace Senai.Revisao.MVC.ViewController
 
         }
 
-        public static void ListarUsuarios(){
-            ListarUsuarios<UsuarioViewModel> ListaDeUsuarios = UsuarioRepositorio.Listar();
-            foreach (var item in ListaDeUsuarios)
+        public static void ListarUsuarios()
+        {
+            List<UsuarioViewModel> ListaDeUsuarios = UsuarioRepositorio.Listar();
+            foreach (var usuario in ListaDeUsuarios)
             {
-                if (item != null)
+                if (usuario != null)
                 {
-                    System.Console.WriteLine($"ID: {item.Id} - Nome: {item.Nome} - Email: {item.Email} - Data de Criação: {item.DataCriacao} ");
-                }                
+                    System.Console.WriteLine($"ID: {usuario.Id} - Nome: {usuario.Nome} - Email: {usuario.Email} - Data de Criação: {usuario.DataCriacao} ");
+                }
             }
         }
 
+        public static UsuarioViewModel EfetuarLogin()
+        {
+            string senha, email;
 
+            System.Console.Write("Digite seu email: ");
+            email = Console.ReadLine();
+            System.Console.Write("Digite sua senha: ");
+            senha = Console.ReadLine();
 
+            UsuarioViewModel usuarioRecuperado = UsuarioRepositorio.Login(email, senha);
+            List<UsuarioViewModel> Lista = UsuarioRepositorio.Listar();
 
+            if (Lista != null)
+            {
 
+                return usuarioRecuperado;
+            }
+          
+            
+            return null;
+        }
     }
 }

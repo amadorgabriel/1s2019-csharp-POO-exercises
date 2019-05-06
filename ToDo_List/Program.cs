@@ -43,14 +43,15 @@ namespace ToDo_List
                                         break;
 
                                     case 2:
-                                        //EXCLLUIR TAREFAS
-                                        System.Console.Write("Qual o ID da tarefa que deseja excluir: ");
-                                        int tarefaRem = int.Parse(Console.ReadLine());
-                                        TarefaRepositorio.Remover(tarefaRem);
+                                        //EXCLUIR TAREFAS
+                                        // System.Console.Write("Qual o ID da tarefa que deseja excluir: ");
+                                        // int tarefaRem = int.Parse(Console.ReadLine());
+                                        // TarefaRepositorio.Remover(tarefaRem);
                                         break;
 
                                     case 3:
                                         //LISTAR TAREFAS
+                                        TarefaViewController.ListarTarefas();
                                         break;
 
                                     case 4:

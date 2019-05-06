@@ -7,21 +7,27 @@ namespace Senai.Revisao.MVC.Repositorio
 {
     public class UsuarioRepositorio
     {
+        public static List<UsuarioViewModel> ListaDeUsuarios = new List<UsuarioViewModel>();
+
         public static UsuarioViewModel Inserir(UsuarioViewModel usuario)
         {
+            List<UsuarioViewModel> listaDeUsuarios = Listar ();
+           int contador = 0;
+           if (listaDeUsuarios != null) {
+               contador = listaDeUsuarios.Count;
+           }
+           usuario.Id = contador + 1;
             // Gera Arquivo CSV
             StreamWriter sw = new StreamWriter("usuarios.csv", true);
             sw.WriteLine($"{usuario.Id};{usuario.Nome};{usuario.Email};{usuario.Senha};{usuario.DataCriacao}");
             sw.Close();
 
             // ListaDeUsuarios.Add(sw);
-
             return usuario;
         }
 
         public static List<UsuarioViewModel> Listar()
         {
-            List<UsuarioViewModel> ListaDeUsuarios = new List<UsuarioViewModel>();
             UsuarioViewModel usuario;
 
             if (!File.Exists("usuarios.csv"))
@@ -48,5 +54,16 @@ namespace Senai.Revisao.MVC.Repositorio
             return ListaDeUsuarios;
         }
 
+        public static UsuarioViewModel Login(string email, string senha)
+        {
+            foreach (UsuarioViewModel usuario in ListaDeUsuarios)
+            {
+                if (email.Equals(usuario.Email) && senha.Equals(usuario.Senha))
+                {
+                    return usuario;
+                }
+            }
+            return null;
+        }
     }
 }

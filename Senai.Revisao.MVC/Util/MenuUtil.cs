@@ -15,6 +15,19 @@ namespace Senai.Revisao.MVC.Util
             System.Console.WriteLine(" 0 - EXIT                         ");
             System.Console.WriteLine("----------------------------------");
             System.Console.Write("Escreva o código: ");
+
+        }
+
+        public static void MenuLogado()
+        {
+            System.Console.WriteLine("----------------------------------");
+            System.Console.WriteLine("          C.A. Enterprise         ");
+            System.Console.WriteLine(" 1 - INSERT NEW PRODUCT           ");
+            System.Console.WriteLine(" 2 - LIST USERS                   ");
+            System.Console.WriteLine(" 3 - BUSCAR POR ID                ");
+            System.Console.WriteLine(" 0 - EXIT                         ");
+            System.Console.WriteLine("----------------------------------");
+            System.Console.Write("Escreva o código: ");
         }
     }
 }
