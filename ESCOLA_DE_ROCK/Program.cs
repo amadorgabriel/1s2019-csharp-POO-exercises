@@ -36,7 +36,7 @@ namespace ESCOLA_DE_ROCK {
                     Console.Clear ();
                     System.Console.WriteLine ("===================================");
                     System.Console.WriteLine ("  \\m/     ESCOLA DE ROCK    \\m/    ");
-                    System.Console.WriteLine ("         Esolha uma formação       ");
+                    System.Console.WriteLine ("         Esolha uma formação       v");
                     System.Console.WriteLine (barraMenu);
 
                     for (int i = 0; i < opcoesFormacao.Count; i++) {
@@ -79,6 +79,8 @@ namespace ESCOLA_DE_ROCK {
                             if (interfaceEncontrada != null) {
                                 vagas--;
                                 ColocarNaBanda ((IHarmonia) instrumento);
+
+                                
 
                             } else {
                                 continue;
