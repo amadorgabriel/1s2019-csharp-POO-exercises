@@ -1,4 +1,6 @@
 using System.Threading;
+using FinancaDeMesa.ViewModel;
+
 namespace FinancaDeMesa.Util {
     public class ValidacoesUtil {
         public static bool ValidarEmail (string email) {
@@ -14,7 +16,14 @@ namespace FinancaDeMesa.Util {
             }
             return false;
                 //CARA SENHA MUITO PEQUENA;
+        }
 
+        public static bool ValidarValorTransacao(double valor, double confirmacaoValor){
+            if (valor.Equals(confirmacaoValor))
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
