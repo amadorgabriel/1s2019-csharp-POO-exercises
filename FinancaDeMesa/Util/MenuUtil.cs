@@ -32,7 +32,7 @@ namespace FinancaDeMesa.Util
             System.Console.WriteLine("  Selecione o Tipo da Transação entre:  ");
             System.Console.WriteLine("  1 - Despesa                           ");
             System.Console.WriteLine("  2 - Receita                           ");
-            System.Console.WriteLine("  0 - SAIR                               ");
+            // System.Console.WriteLine("  0 - SAIR                               ");
             System.Console.WriteLine("Código: ");
         }
     }

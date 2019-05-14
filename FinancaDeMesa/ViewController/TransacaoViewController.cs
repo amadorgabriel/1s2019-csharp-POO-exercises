@@ -1,5 +1,6 @@
 using System;
 using System.Threading;
+using FinancaDeMesa.Repositorio;
 using FinancaDeMesa.Util;
 using FinancaDeMesa.ViewModel;
 
@@ -7,12 +8,11 @@ namespace FinancaDeMesa.ViewController
 {
     public class TransacaoViewController
     {
-        public void CadastrarTransacao()
+        public static void CadastrarTransacao()
         {
             string descricao;
             double valor, confirmaValor;
             string tipoTransacao;
-            DateTime dataTransacao;
 
             do
             {
@@ -28,17 +28,14 @@ namespace FinancaDeMesa.ViewController
                         tipoTransacao = "Receita";
                         break;
 
-                    case 0:
-                        tipoTransacao = null;
-                        break;
 
                     default:
-                        System.Console.WriteLine("Código Inválido..");
-                        tipoTransacao = null;
+                        System.Console.WriteLine("Código Inválido");
                         Thread.Sleep(2000);
+                        tipoTransacao = "null";
                         break;
                 }
-            } while (tipoTransacao.Equals(null)); // Fim Tipo Transação
+            } while (tipoTransacao.Equals("null")); // Fim Tipo Transação
 
             do
             {
@@ -66,9 +63,39 @@ namespace FinancaDeMesa.ViewController
                 }
             } while (string.IsNullOrEmpty(descricao)); //Fim da descrição
 
-            //
+
+            //-------
+
+            //Criar requisição data de nacimento
+
+            //-------
+            
+            TransacoesViewModel transacao = new TransacoesViewModel ();
+
+            transacao.Descricao = descricao;
+            transacao.Valor = valor;
+            transacao.TipoTransacao = tipoTransacao;
+            transacao.DataTransacao = DateTime.Now;
+
+            //INSERIR USUÁRIO
+            TransacaoRepositorio.Inserir(transacao);
+            //INSERIR USUÁRIO
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            System.Console.WriteLine ("Cadastro realizado com sucesso");
+            Console.ResetColor ();
+
+            //------
+        }
+   
+        public void RelatarWord(){
+
+
+
 
 
         }
+   
+   
     }
 }

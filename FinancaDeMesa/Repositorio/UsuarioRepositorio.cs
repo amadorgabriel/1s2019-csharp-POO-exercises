@@ -7,12 +7,19 @@ namespace FinancaDeMesa.Repositorio
 {
     public class UsuarioRepositorio
     {
-       
+
         public static UsuarioViewModel InserirUsuario(UsuarioViewModel usuario)
         { //INSERE O USER NO CSV
-            //adiciona o usuario a uma outra linha
+
+            // int contador = 0;
+            // if (TrazerListaDeUsuario() != null)
+            // {
+            //     contador = TrazerListaDeUsuario().Count;
+            // }
+            // usuario.Id = contador + 1;
+            // adiciona o usuario a uma outra linha
             StreamWriter arquivoWritter = new StreamWriter("usuarios.csv", true);
-            arquivoWritter.WriteLine($"{usuario.Nome};{usuario.Email};{usuario.Senha};{usuario.DataNacimento}");
+            arquivoWritter.WriteLine($"{usuario.Nome};{usuario.Email};{usuario.Senha};{usuario.DataNacimento};{usuario.Id}");
             arquivoWritter.Close();
             return usuario;
         }
@@ -38,6 +45,8 @@ namespace FinancaDeMesa.Repositorio
                     usuario.Email = dadoUsuario[1];
                     usuario.Senha = dadoUsuario[2];
                     usuario.DataNacimento = DateTime.Parse(dadoUsuario[3]);
+                    usuario.Id = int.Parse(dadoUsuario[4]);
+
                     ListaDeUsuarios.Add(usuario);
                 }
             }
@@ -48,7 +57,7 @@ namespace FinancaDeMesa.Repositorio
 
         public static UsuarioViewModel TrazerUserLogado(string email, string senha)
         {
-		  List<UsuarioViewModel> ListaUsuarios = UsuarioRepositorio.TrazerListaDeUsuario();
+            List<UsuarioViewModel> ListaUsuarios = UsuarioRepositorio.TrazerListaDeUsuario();
 
             foreach (var item in ListaUsuarios)
             {
@@ -58,6 +67,9 @@ namespace FinancaDeMesa.Repositorio
                 }
             }
             return null;
+
+
+
 
         }
     }

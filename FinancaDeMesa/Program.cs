@@ -3,6 +3,7 @@ using FinancaDeMesa.Util;
 using System.Threading;
 using FinancaDeMesa.ViewController;
 using FinancaDeMesa.ViewModel;
+using FinancaDeMesa.Repositorio;
 
 namespace FinancaDeMesa
 {
@@ -43,12 +44,17 @@ namespace FinancaDeMesa
                                 {
                                     case 1:
                                         //Cadastrar transações
+                                        Console.Clear();
+                                        TransacaoViewController.CadastrarTransacao();
                                         break;
                                     case 2:
-                                        //Exibir Transaçõa Total
+                                        //Exibir Transações, ou seja infos de cada Transação
                                         break;
                                     case 3:
                                         //Relatar no word
+                                        Console.Clear();
+                                        TransacaoRepositorio.GerarDocWord();
+                                        
                                         break;
                                     case 4:
                                         //Exportar Banco de Dados
@@ -70,6 +76,8 @@ namespace FinancaDeMesa
                         }
                         else
                         {
+                            System.Console.WriteLine("Usuário não Encontrado..");
+                            Thread.Sleep(2000);
                             continue;
                         }
 
