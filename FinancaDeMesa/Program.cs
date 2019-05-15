@@ -30,7 +30,6 @@ namespace FinancaDeMesa
                         if (UserRec != null)
                         {
                             bool querSair2 = false;
-
                             do
                             {
                                 Console.Clear();
@@ -64,7 +63,8 @@ namespace FinancaDeMesa
                                         break;
                                     case 5:
                                         Console.Clear();
-                                        //Exportar Banco de Dados no zip
+                                        //Exportar Banco de Dados no zip 
+                                        TransacaoViewController.ExportarZip();
                                         break;
 
                                     case 0: //-- FEITO
@@ -79,7 +79,6 @@ namespace FinancaDeMesa
                                         break;
                                 }
                             } while (!querSair2);
-
                         }
                         else
                         {
@@ -87,7 +86,6 @@ namespace FinancaDeMesa
                             Thread.Sleep(2000);
                             continue;
                         }
-
                         break;
 
                     case 0:

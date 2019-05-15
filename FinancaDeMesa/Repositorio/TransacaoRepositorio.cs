@@ -70,7 +70,6 @@ namespace FinancaDeMesa.Repositorio
                         if (user.Id.Equals(transacao.IdUsuarioCriador) && user != null)
                         {
                             Para.AppendText($"Id Usuário Criador: {transacao.IdUsuarioCriador} - Tipo da Transação: {transacao.TipoTransacao} - Descrição: {transacao.Descricao} - Valor: {transacao.Valor} - Data da Transação: {transacao.DataTransacao}");
-
                         }
                     }
             //     }
@@ -78,6 +77,5 @@ namespace FinancaDeMesa.Repositorio
             doc.SaveToFile("ExtratoMinhasTransações.docx");
             return doc;
         }
-
     }
 }
