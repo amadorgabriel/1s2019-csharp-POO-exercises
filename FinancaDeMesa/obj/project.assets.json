@@ -939,11 +939,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\44680781890\\Documents\\Gabriel Rodrigues Amador - Tarde -Dev. Sist\\Sprint 4\\Programacao-Orientada-a-Objeto\\FinancaDeMesa\\FinancaDeMesa.csproj",
+      "projectUniqueName": "D:\\SENAI\\Sprint 4 - CSHARP\\FinancaDeMesa\\FinancaDeMesa.csproj",
       "projectName": "FinancaDeMesa",
-      "projectPath": "c:\\Users\\44680781890\\Documents\\Gabriel Rodrigues Amador - Tarde -Dev. Sist\\Sprint 4\\Programacao-Orientada-a-Objeto\\FinancaDeMesa\\FinancaDeMesa.csproj",
+      "projectPath": "D:\\SENAI\\Sprint 4 - CSHARP\\FinancaDeMesa\\FinancaDeMesa.csproj",
       "packagesPath": "C:\\Users\\44680781890\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\44680781890\\Documents\\Gabriel Rodrigues Amador - Tarde -Dev. Sist\\Sprint 4\\Programacao-Orientada-a-Objeto\\FinancaDeMesa\\obj\\",
+      "outputPath": "D:\\SENAI\\Sprint 4 - CSHARP\\FinancaDeMesa\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

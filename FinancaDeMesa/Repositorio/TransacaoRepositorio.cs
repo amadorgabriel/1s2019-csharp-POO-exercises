@@ -9,15 +9,15 @@ namespace FinancaDeMesa.Repositorio
 {
     public class TransacaoRepositorio
     {
-        public static TransacoesViewModel Inserir(TransacoesViewModel transacao)
+        public static TransacoesViewModel Inserir(TransacoesViewModel transacao, UsuarioViewModel UserRec)
         {
+            transacao.IdUsuarioCriador = UserRec.Id; // Id da transação é igual a do usuário logado
 
             StreamWriter arquivo = new StreamWriter("transacoes.csv", true);
-
-            arquivo.WriteLine($"{transacao.TipoTransacao}; {transacao.Descricao}; {transacao.Valor}; {transacao.DataTransacao}");
+            arquivo.WriteLine($"{transacao.TipoTransacao}; {transacao.Descricao}; {transacao.Valor}; {transacao.DataTransacao}; {transacao.IdUsuarioCriador}");
             arquivo.Close();
             return transacao;
-            // using {
+            // using xxxxxx{   USA UMA BIBLIOTECA EM UM LOCAL ESPECÍFICO
 
             // }
         }
@@ -39,10 +39,11 @@ namespace FinancaDeMesa.Repositorio
 
                     string[] dadosDaTransacao = usuario.Split(";");
                     transacao = new TransacoesViewModel();
-                    transacao.TipoTransacao = dadosDaTransacao[2];
-                    transacao.Descricao = dadosDaTransacao[0];
-                    transacao.Valor = double.Parse(dadosDaTransacao[1]);
+                    transacao.TipoTransacao = dadosDaTransacao[0];
+                    transacao.Descricao = dadosDaTransacao[1];
+                    transacao.Valor = double.Parse(dadosDaTransacao[2]);
                     transacao.DataTransacao = DateTime.Parse(dadosDaTransacao[3]);
+                    transacao.IdUsuarioCriador = int.Parse(dadosDaTransacao[4]);
                     ListaDeTransacoes.Add(transacao);
                 } //fim if null
             } //fim foreach
@@ -50,25 +51,33 @@ namespace FinancaDeMesa.Repositorio
         } // fim listar
 
 
-        public static void GerarDocWord(){
+        public static Document GerarDocWord(UsuarioViewModel DadosUserLogado)
+        {
             Document doc = new Document();
             Paragraph Para = doc.AddSection().AddParagraph();
-            var ListaUser =  UsuarioRepositorio.TrazerListaDeUsuario();
+            var ListaUser = UsuarioRepositorio.TrazerListaDeUsuario();
             UsuarioViewModel usuario = new UsuarioViewModel();
+            TransacoesViewModel transacao = new TransacoesViewModel();
+  
+            Para.AppendText("                                                                 Relatório das Minhas Transações                                                  ");
+            // foreach (var item in ListaUser)
+            // {
+            //     if (item.Email.Equals(DadosUserLogado.Email) && item.Senha.Equals(DadosUserLogado.Senha) && item != null)
+            //     {
+                    //Escrever relatório das transações do user
+                    foreach (var user in ListaUser)
+                    {
+                        if (user.Id.Equals(transacao.IdUsuarioCriador) && user != null)
+                        {
+                            Para.AppendText($"Id Usuário Criador: {transacao.IdUsuarioCriador} - Tipo da Transação: {transacao.TipoTransacao} - Descrição: {transacao.Descricao} - Valor: {transacao.Valor} - Data da Transação: {transacao.DataTransacao}");
 
-            Para.AppendText("                                                  Relatório dos Usuários Cadastrados                                                  ");            
-            foreach (var item in ListaUser)
-            {
-                Para.AppendText($"Nome: {item.Nome } - Id: {item.Id} - Email: {item.Email} - Data de Nacimento: {item.DataNacimento}");
-                    // foreach (var item in collection)
-                    // {
-                        
-                    // }
-            }
-
-
-
-            doc.SaveToFile("ExtratoTransações.docx");
+                        }
+                    }
+            //     }
+            // }
+            doc.SaveToFile("ExtratoMinhasTransações.docx");
+            return doc;
         }
+
     }
 }

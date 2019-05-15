@@ -8,7 +8,7 @@ namespace FinancaDeMesa.ViewController
 {
     public class TransacaoViewController
     {
-        public static void CadastrarTransacao()
+        public static void CadastrarTransacao( UsuarioViewModel UserLogado)
         {
             string descricao;
             double valor, confirmaValor;
@@ -51,11 +51,10 @@ namespace FinancaDeMesa.ViewController
 
             } while (!ValidacoesUtil.ValidarValorTransacao(valor, confirmaValor));// Fim do Valor Transação
 
-
             do
             {
                 System.Console.WriteLine("Escreva a descrição da Transação: ");
-                descricao = Console.ReadLine(); // VALIDAR SE ELE NÃO DOGITOU NADA
+                descricao = Console.ReadLine(); // VALIDAR CASO ELE NÃO DIGITOU NADA
                 if (string.IsNullOrEmpty(descricao))
                 {
                     System.Console.WriteLine("Escreva Algo Válido ");
@@ -63,39 +62,54 @@ namespace FinancaDeMesa.ViewController
                 }
             } while (string.IsNullOrEmpty(descricao)); //Fim da descrição
 
-
-            //-------
-
-            //Criar requisição data de nacimento
-
-            //-------
-            
-            TransacoesViewModel transacao = new TransacoesViewModel ();
-
+            TransacoesViewModel transacao = new TransacoesViewModel();
             transacao.Descricao = descricao;
             transacao.Valor = valor;
             transacao.TipoTransacao = tipoTransacao;
             transacao.DataTransacao = DateTime.Now;
 
             //INSERIR USUÁRIO
-            TransacaoRepositorio.Inserir(transacao);
+            TransacaoRepositorio.Inserir(transacao, UserLogado);
             //INSERIR USUÁRIO
 
             Console.ForegroundColor = ConsoleColor.Green;
-            System.Console.WriteLine ("Cadastro realizado com sucesso");
-            Console.ResetColor ();
-
+            System.Console.WriteLine("Cadastro realizado com sucesso");
+            Console.ResetColor();
             //------
         }
-   
-        public void RelatarWord(){
 
-
-
-
-
+        public static void ExibirTransacoesTerminal(){
+            var ListaTransacoes = TransacaoRepositorio.TrazerListaDeTransacoes();
+            foreach (var transacao in ListaTransacoes)
+            {
+                if (transacao != null)
+                {   
+                    System.Console.WriteLine($"Id Usuario Criador: {transacao.IdUsuarioCriador} - Tipo de Transação: {transacao.TipoTransacao} - Valor: {transacao.Valor} - Descrição: {transacao.Descricao} - Data da Transação: {transacao.DataTransacao}");
+                    Console.ReadLine();
+                    
+                }else{
+                    System.Console.WriteLine("Não há mais transações cadastradas");
+                    Thread.Sleep(1000);
+                }
+            }
         }
-   
-   
+
+        public static void RelatarWord(UsuarioViewModel usuarioLogado)
+        {
+            var DocumentoGerado = TransacaoRepositorio.GerarDocWord(usuarioLogado);
+            if (DocumentoGerado != null)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                System.Console.WriteLine($"Documento Gerado com Sucesso!");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                System.Console.WriteLine("Houve algum erro, tente novamente. Se o resultado persistir, ligue para C.A Enterprises - 25450459 ");
+                Console.ResetColor();
+            }
+            Thread.Sleep(2000);
+        }
     }
 }

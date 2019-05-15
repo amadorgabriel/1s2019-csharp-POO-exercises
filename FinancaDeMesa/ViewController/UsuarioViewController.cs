@@ -10,7 +10,7 @@ namespace FinancaDeMesa.ViewController
 {
     public class UsuarioViewController
     {
-	 UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio();
+        UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio();
 
         public static void CadastrarUsuario()
         {
@@ -62,6 +62,7 @@ namespace FinancaDeMesa.ViewController
                 }
 
             } while (!repetir);//FIM SENHA E CONFIRMAÇÃO
+            
 
             UsuarioViewModel usuario = new UsuarioViewModel();
             usuario.Nome = nome;
@@ -82,7 +83,6 @@ namespace FinancaDeMesa.ViewController
         public static UsuarioViewModel Logar()
         {
             string email, senha;
-
             do
             {
                 System.Console.Write("Digite seu email: ");
@@ -108,8 +108,23 @@ namespace FinancaDeMesa.ViewController
             {
                 return null;
             }
+        }
+        public static void RelatarWord()
+        {
+            var DocumentoGerado = UsuarioRepositorio.GerarDocWord();
+            if (DocumentoGerado != null)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                System.Console.WriteLine($"Documento Gerado com Sucesso!");
+                Console.ResetColor();
+            }else
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                System.Console.WriteLine("Houve algum erro, tente novamente. Se o resultado persistir, ligue para C.A Enterprises - 25450459 ");
+                Console.ResetColor();
 
-
+            }
+            Thread.Sleep(2000);
         }
 
     }

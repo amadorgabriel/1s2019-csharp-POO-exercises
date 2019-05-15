@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using FinancaDeMesa.ViewModel;
+using Spire.Doc;
+using Spire.Doc.Documents;
 
 namespace FinancaDeMesa.Repositorio
 {
@@ -10,17 +12,19 @@ namespace FinancaDeMesa.Repositorio
 
         public static UsuarioViewModel InserirUsuario(UsuarioViewModel usuario)
         { //INSERE O USER NO CSV
-
-            // int contador = 0;
-            // if (TrazerListaDeUsuario() != null)
-            // {
-            //     contador = TrazerListaDeUsuario().Count;
-            // }
-            // usuario.Id = contador + 1;
             // adiciona o usuario a uma outra linha
+
             StreamWriter arquivoWritter = new StreamWriter("usuarios.csv", true);
             arquivoWritter.WriteLine($"{usuario.Nome};{usuario.Email};{usuario.Senha};{usuario.DataNacimento};{usuario.Id}");
             arquivoWritter.Close();
+
+            int contador = 0;
+            if (TrazerListaDeUsuario() != null)
+            {
+                contador = TrazerListaDeUsuario().Count;
+            }
+            usuario.Id = contador + 1;
+
             return usuario;
         }
         public static List<UsuarioViewModel> TrazerListaDeUsuario()
@@ -67,10 +71,21 @@ namespace FinancaDeMesa.Repositorio
                 }
             }
             return null;
+        }
 
+        public static Document GerarDocWord(){
+            Document doc = new Document();
+            Paragraph Para = doc.AddSection().AddParagraph();
+            var ListaUser =  UsuarioRepositorio.TrazerListaDeUsuario();
+            UsuarioViewModel usuario = new UsuarioViewModel();
 
-
-
+            Para.AppendText("                                                          Relatório dos Usuários Cadastrados                                                  ");            
+            foreach (var item in ListaUser)
+            {
+                Para.AppendText($"Nome: {item.Nome } - Id: {item.Id} - Email: {item.Email} - Data de Nacimento: {item.DataNacimento}");
+            }
+            doc.SaveToFile("ExtratoTransaçõesUsers.docx");
+            return doc;
         }
     }
 }

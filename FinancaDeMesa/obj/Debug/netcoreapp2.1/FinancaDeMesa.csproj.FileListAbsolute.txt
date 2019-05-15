@@ -1,11 +1,11 @@
-C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\FinancaDeMesa\bin\Debug\netcoreapp2.1\FinancaDeMesa.deps.json
-C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\FinancaDeMesa\bin\Debug\netcoreapp2.1\FinancaDeMesa.runtimeconfig.json
-C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\FinancaDeMesa\bin\Debug\netcoreapp2.1\FinancaDeMesa.runtimeconfig.dev.json
-C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\FinancaDeMesa\bin\Debug\netcoreapp2.1\FinancaDeMesa.dll
-C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\FinancaDeMesa\bin\Debug\netcoreapp2.1\FinancaDeMesa.pdb
-C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\FinancaDeMesa\obj\Debug\netcoreapp2.1\FinancaDeMesa.csprojAssemblyReference.cache
-C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\FinancaDeMesa\obj\Debug\netcoreapp2.1\FinancaDeMesa.csproj.CoreCompileInputs.cache
-C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\FinancaDeMesa\obj\Debug\netcoreapp2.1\FinancaDeMesa.AssemblyInfoInputs.cache
-C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\FinancaDeMesa\obj\Debug\netcoreapp2.1\FinancaDeMesa.AssemblyInfo.cs
-C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\FinancaDeMesa\obj\Debug\netcoreapp2.1\FinancaDeMesa.dll
-C:\Users\44680781890\Documents\Gabriel Rodrigues Amador - Tarde -Dev. Sist\Sprint 4\Programacao-Orientada-a-Objeto\FinancaDeMesa\obj\Debug\netcoreapp2.1\FinancaDeMesa.pdb
+D:\SENAI\Sprint 4 - CSHARP\FinancaDeMesa\bin\Debug\netcoreapp2.1\FinancaDeMesa.deps.json
+D:\SENAI\Sprint 4 - CSHARP\FinancaDeMesa\bin\Debug\netcoreapp2.1\FinancaDeMesa.runtimeconfig.json
+D:\SENAI\Sprint 4 - CSHARP\FinancaDeMesa\bin\Debug\netcoreapp2.1\FinancaDeMesa.runtimeconfig.dev.json
+D:\SENAI\Sprint 4 - CSHARP\FinancaDeMesa\bin\Debug\netcoreapp2.1\FinancaDeMesa.dll
+D:\SENAI\Sprint 4 - CSHARP\FinancaDeMesa\bin\Debug\netcoreapp2.1\FinancaDeMesa.pdb
+D:\SENAI\Sprint 4 - CSHARP\FinancaDeMesa\obj\Debug\netcoreapp2.1\FinancaDeMesa.csprojAssemblyReference.cache
+D:\SENAI\Sprint 4 - CSHARP\FinancaDeMesa\obj\Debug\netcoreapp2.1\FinancaDeMesa.csproj.CoreCompileInputs.cache
+D:\SENAI\Sprint 4 - CSHARP\FinancaDeMesa\obj\Debug\netcoreapp2.1\FinancaDeMesa.AssemblyInfoInputs.cache
+D:\SENAI\Sprint 4 - CSHARP\FinancaDeMesa\obj\Debug\netcoreapp2.1\FinancaDeMesa.AssemblyInfo.cs
+D:\SENAI\Sprint 4 - CSHARP\FinancaDeMesa\obj\Debug\netcoreapp2.1\FinancaDeMesa.dll
+D:\SENAI\Sprint 4 - CSHARP\FinancaDeMesa\obj\Debug\netcoreapp2.1\FinancaDeMesa.pdb

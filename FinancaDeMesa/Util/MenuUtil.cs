@@ -19,10 +19,11 @@ namespace FinancaDeMesa.Util
             System.Console.WriteLine("       Seja bem-vindo à MobiTec              ");
             System.Console.WriteLine("=============================================");
             System.Console.WriteLine("           Parabéns por se logar!            ");
-            System.Console.WriteLine("           1 - Cadastrar transações          ");
-            System.Console.WriteLine("           2 - Exibir transações totais      ");
-            System.Console.WriteLine("           3 - Relatar no Word               ");
-            System.Console.WriteLine("           4 - Exportar banco de dados       ");
+            System.Console.WriteLine("    1 - Cadastrar transações                 ");
+            System.Console.WriteLine("    2 - Exibir transações totais             ");
+            System.Console.WriteLine("    3 - Relatar Word Usuários Cadastrados    ");
+            System.Console.WriteLine("    4 - Relatar Word minhas Transações         ");
+            System.Console.WriteLine("    5 - Exportar banco de dados              ");
             System.Console.WriteLine("           0 - SAIR                          ");
             System.Console.WriteLine("=============================================");
             System.Console.Write("Código: ");

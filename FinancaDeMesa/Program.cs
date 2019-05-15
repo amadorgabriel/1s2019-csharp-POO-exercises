@@ -43,30 +43,37 @@ namespace FinancaDeMesa
                                 switch (resposta)
                                 {
                                     case 1:
-                                        //Cadastrar transações
+                                        //Cadastrar transações -- FEITO
                                         Console.Clear();
-                                        TransacaoViewController.CadastrarTransacao();
+                                        TransacaoViewController.CadastrarTransacao(UserRec);
                                         break;
                                     case 2:
-                                        //Exibir Transações, ou seja infos de cada Transação
+                                        //Exibir Transações, ou seja infos de cada  -- SUPOSTAMENTE FEITO
+                                        Console.Clear();
+                                        TransacaoViewController.ExibirTransacoesTerminal();
                                         break;
                                     case 3:
-                                        //Relatar no word
+                                        //Relatar no word Users -- SUPOSTAMENTE FEITO
                                         Console.Clear();
-                                        TransacaoRepositorio.GerarDocWord();
-                                        
+                                        UsuarioViewController.RelatarWord(); 
                                         break;
                                     case 4:
-                                        //Exportar Banco de Dados
+                                        //Relatar no word Transaçoes do usuario -- SUPOSTAMENTE FEITO
+                                        Console.Clear();
+                                        TransacaoViewController.RelatarWord(UserRec);
+                                        break;
+                                    case 5:
+                                        Console.Clear();
+                                        //Exportar Banco de Dados no zip
                                         break;
 
-                                    case 0:
+                                    case 0: //-- FEITO
                                         System.Console.WriteLine("Saindo..");
                                         Thread.Sleep(2000);
                                         querSair2 = true;
                                         break;
 
-                                    default://ERRO, VOLTA AO MENU PRINCIPAL
+                                    default://ERRO, VOLTA AO MENU PRINCIPAL -- FEITO
                                         System.Console.WriteLine("Código inválido.. ");
                                         Thread.Sleep(2000);
                                         break;
